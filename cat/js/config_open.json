@@ -1,199 +1,841 @@
-﻿{
-"video": {"sites": [
 {
-                "key": "douban",
-                "name": "索引 | 豆瓣",
-                "type": 3,
-                "indexs": 1,
-                "api": "//bbQ0FUT1CxBBxkb3ViYW5fb3Blbi5qcyxhc3NldHM6Ly9qcy9saWIvY2F0LmpzHF9fanNFdmFsUmV0dXJuDENyeXB0bwpkYXlqcwxqaW5qYTIGVXJpAl8OXzB4NGRjMw5fMHg0ODg0El8weDQwYjM4MxJfMHg1Y2UxODkSXzB4M2I5ZWFmEl8weDFmMjM4YhJfMHgyMjVjNTISXzB4MzMzOGZjEl8weDE2N2Y3ZBJfMHg1N2FmNGISXzB4MWRiYTZmEl8weDFkNTI4ZhJfMHgyZDllN2YSXzB4NDIyNjMyEl8weDFlOTYxMxJfMHg1MWIwNmESXzB4NTAwODExEl8weDU1ZTc4MxJfMHgxZTVmY2ESXzB4MmZkYmQ1CHR5cGUOcmVwbGFjZQhzb3J0B8SLBlI6AFQvYXBpL3YyL3NreW5ldC9uZXdfcGxheWxpc3RzP3N1YmplY3RfdHlwZT0UY2hhckNvZGVBdApwcml6ZQ53ZXN0ZXJuSHN1YmplY3RfY29sbGVjdGlvbi90dl9qYXBhbmVzZS9pdGVtcyAvYXBpL3YyL2RvdWxpc3QvEGNyaW1pbmFsDR93nluLTvZOOWUWfwxjaGFyQXRIc3ViamVjdF9jb2xsZWN0aW9uL3R2X2RvbWVzdGljL2l0ZW1zCHB1c2gKa29yZWEIcGF0aAxCYXNlNjQKc2hpZnQIY2VpbBRzaG9ydF9uYW1l0AEmb3Nfcm9tPWFuZHJvaWQmYXBwbGU9YzUyZmJiOTliOTA4YmU0ZDAyNjk1NGNjNDM3NGYxNmQmbW9vbmNha2U9MGY2MDcyNjRmYzYzMThhOTJiOWUxM2M2NWRiN2NkM2Mmc3VnYXI9MBBvZmZpY2lhbBZpbnNwaXJhdGlvbhB2aW9sZW5jZRovcG9zdHM/c3RhcnQ9ci9hcGkvdjIvbW92aWUvY2F0ZWdvcnlfcmFua3M/Y291bnQ9MzAmY2F0ZWdvcnk9cmVjZW50X2hvdBQmY2F0ZWdvcnk9CnRpdGxlggFBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWmFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6MDEyMzQ1Njc4OSsvPRBob3JyaWJsZQwmdWRpZD0OZmFudGFzeRZibGFja193aGl0ZQZhbGwOY2FydG9vbjBzdWJqZWN0X2NvbGxlY3Rpb25faXRlbXMYZnJvbUNoYXJDb2RlIGJmN2RkZGM3YzljZmU2ZjcMc3BsaWNlSHN1YmplY3RfY29sbGVjdGlvbi90dl9hbWVyaWNhbi9pdGVtcwxyYW5kb20GZW5jFnRvTG93ZXJDYXNlCnBhcnNlMHdxODZ3NzNDbU1PcEhjT2V3NkhDdXl3PQYweDAMeVpTREtVanJldHVybiAoZnVuY3Rpb24oKSB7fS5jb25zdHJ1Y3RvcigicmV0dXJuIHRoaXMiKSggKSk7IFozdzFCTUtZS2dOYXc2WT0Sc3Vic3RyaW5nBmNyXwomX3RzPQm3UeiVc09HcgphY3Rvcgh1bml4CWhR6JB0XuNOBjB4MgZkbF8IdDI1MAx2YVJNY0UMZG91YmFuCGN1cmUSbGlzdF90eXBlEGRpcmVjdG9yCmxhcmdlDmNvbnRlbnQOc3ViamVjdAxub3JtYWwMZmFtaWx5DHJhdGluZwx4SVVZWnJEJmNvdW50PTMwJnVwZGF0ZWRfYXQ9Jml0ZW1zX29ubHk9MUpzdWJqZWN0X2NvbGxlY3Rpb24vdHZfYW5pbWF0aW9uL2l0ZW1zBjB4M2wvYXBpL3YyL3R2L2NhdGVnb3J5X3JhbmtzP2NvdW50PTMwJmNhdGVnb3J5PXJlY2VudF9ob3QJD1z0izllFn8QamFwYW5lc2UIYXRvYgpub3ZlbDYvYXBpL3YyL3N1YmplY3RfY29sbGVjdGlvbi8QTm53OUFjT08IZGF0YQ5pbmRleE9mICZzY29yZV9yYW5nPTAsMTCfAS8AYQBwAGkALwB2ADIALwBtAG8AdgBpAGUALwB0AGEAZwA/AHMAbwByAHQAPQBVACYAcwB0AGEAcgB0AD0AMAAmAGMAbwB1AG4AdAA9ADMAMAAmAHEAPQBoUeiQYl8PXywAaFHokHt8i1csAGhR6JAwVzpTLABoUeiQdF7jTiYAcwBjAG8AcgBlAF8AcgBhAG4AZwA9ADAALAAxADAACWhR6JAwVzpTCGxnYnQMJl9zaWc9CE4pbmwKdG90YWwGcGljBndhciAmbG9jX2lkPTAmc3RhcnQ9CGUwaEUGMHgxHG1vdmllL2hvdF9nYWlhCnNvcnRzCHRhZ3MWZG9jdW1lbnRhcnkUaGlnaF9zY29yZQpzdHlwZRovaXRlbXM/c3RhcnQ9DFNRamV0UQwmdXVpZD0oc2VsZWN0ZWRfY29sbGVjdGlvbnMH/VanTmdSDmNvbnNvbGWmASBwbGF0Zm9ybS9tb2JpbGUgY29tLmRvdWJhbi5mcm9kby83LjkuMCgyMTYpIFJleHhhci8xLjIuMTUxIHBsYXRmb3JtL21vYmlsZSAxLjIuMTUxZT8AYQByAGUAYQA9AGhR6JAmAHMAbwByAHQAPQByAGUAYwBvAG0AbQBlAG4AZAAmAHAAbABhAHkAYQBiAGwAZQA9ADAAJgBsAG8AYwBfAGkAZAA9ADAAJgBzAHQAYQByAHQAPQAKcGFuaWMMYWN0aW9uEEhtYWNTSEExEHNlbGVjdGVkLi9hcGkvdjIvbW92aWUvdGFnP3NvcnQ9GGxpdGVyYXJ5X2FydBImY291bnQ9MzAIeWVhcj5zdWJqZWN0X2NvbGxlY3Rpb24vdHZfaG90L2l0ZW1zEmNsYXNzaWNhbAxtb3ZpbmcIc2tleRJzdHJpbmdpZnkKeW91dGgKaXRlbXMQL2FwaS92Mi/+ASYmcm9tPWFuZHJvaWQmYXBpa2V5PTBkYWQ1NTFlYzBmODRlZDAyOTA3ZmY1YzQyZThlYzcwJnM9cmV4eGFyX25ldyZjaGFubmVsPVlpbmd5b25nYmFvX01hcmtldCZ0aW1lem9uZT1Bc2lhL1NoYW5naGFpJmRldmljZV9pZD0MZGV2aWNlFGRhcmtfaHVtb3IJ0Z5ygn1e2J4SY292ZXJfdXJsDGNvbWVkeQhHRVQm6gFSZXh4YXItQ29yZS8wLjEuMyBhcGktY2xpZW50LzEgY29tLmRvdWJhbi5mcm9kby83LjkuMCgyMTYpIEFuZHJvaWQvMjggcHJvZHVjdC9YaWFvbWkxMSByb20vYW5kcm9pZCBuZXR3b3JrL3dpZmkgdWRpZC8IY2F0ZRRkYXJrX2hvcnNlvwEvAGEAcABpAC8AdgAyAC8AcwB1AGIAagBlAGMAdABfAGMAbwBsAGwAZQBjAHQAaQBvAG4ALwBtAG8AdgBpAGUAXwB0AG8AcAAyADUAMAAvAGkAdABlAG0AcwA/AGEAcgBlAGEAPQBoUeiQJgBzAG8AcgB0AD0AcgBlAGMAbwBtAG0AZQBuAGQAJgBwAGwAYQB5AGEAYgBsAGUAPQAwACYAbABvAGMAXwBpAGQAPQAwACYAcwB0AGEAcgB0AD0AIHc0dkN0OEtEd296Q2xnPT0HNXXGiWdSCDB4MWEwaHR0cHM6Ly9mcm9kby5kb3ViYW4uY29temFiYWNkZWZnaGprbG1ub3BxcnN0dXZ3eHl6QUJDREVGR0hKS0xNTk9QUVJTVFVWV1hZWjAxMjM0NTY3ODkSXzB4MzZiM2Q2El8weDRkYzMwOBJfMHg0ODg0ZDMSXzB4YTcxZDRkEl8weDIwNGQyZhJfMHgzNTQyZGYSXzB4MmMyOTUyEl8weDJlMWRkORJfMHg2MjgyNTQIMHg4YwRpZAgweDQ1CDB4NWMIMHg4MQgweDE0CDB4NGQIMHg2MiRlbmNvZGVVUklDb21wb25lbnQIMHg3YwImBjB4NggweDdkCDB4NTgIMHgzNQgweDExEl8weGNlYWJjZhJfMHgzZjBiNGISXzB4MzY5Nzg1BnJlcQR1YRRVc2VyLUFnZW50DmhlYWRlcnMGMHg4CDB4MWYSXzB4MzkxYTBhEl8weDI3M2FlYhJfMHg0NjAwMjISXzB4NDcwMzA2El8weDIzZDkwMRJfMHgyY2Y1NjgSXzB4ZmM4MzIyEl8weDVkOTU2ORJfMHgxYTcwYzQIMHg1NwgweDQyBjB4OQgweDY4GHc3N0R2c085d3E5VggweDJlBjB4ZQgweDI3CDltVkEIMHgxNggweDNiCDB4M2MIMHgzNgYweDQIdzcxZgYweGEISGdNMwgweDQ4BmxvZwgweDVkCmxvY2FsCDB4NTQIMHg3YQ5pc0VtcHR5BjB4NwgweDYzCDB4NDkIMHg2NBJfMHg2YjgwNWMIMHg3OQgweDdlEl8weDE2M2Q5OBJfMHgxOTdjNDcSXzB4M2ZiYWI4El8weDNkNjVlZBJfMHg1OTI2ZTAIMHgyYgYweGIIMHgyNAgweDE5CDB4NDQSXzB4MmM0MjNhEl8weDEwMDg4OQYweGQMd2luZG93EF8weDNjZjYwEl8weDI1ZTcxOBJfMHgyNGVjY2USXzB4MjEwOWMwEl8weDIyNGYwNxJfMHgzN2Y5YjASXzB4NTM3ZTA3CDB4NmMIMHg3NwgweDhhCDB4MzASXzB4MWRkN2FjEl8weDFmMzY5ZBJfMHgyYWM4ZjMSXzB4NGM3ZTcxEl8weDQzMGM5YxJfMHg0NWQwYzcSXzB4MTQ2YmQ0El8weDIxMmQyYxJfMHgzOTFiODUSXzB4NWQwNTVmEl8weDM0MjI1ZQIlBDAwCDB4ODMKc2xpY2UkZGVjb2RlVVJJQ29tcG9uZW50CDB4NzASXzB4NTBkMjUyEl8weDU3ZjI4OBJfMHg0NjlkMmYSXzB4MTNmNDM2El8weDNhZTFhYxJfMHgzOTgzNTYSXzB4NDM1MTc3El8weDIxZjdlMhJfMHg1MTJlYjQSXzB4MjY5MmZiEl8weDM3ZjdjOBJfMHgxZTY5OWUSXzB4MWFhNjE2BHt9CDB4MzICdQZrZXkIaW5pdAU1dXFfAm4IMHgzZAJ2CDB4NjkIMHg1MwgweDQ3CDB4NzgFjn9nUgXlZWdSCDB4NzMF6ZdnUkRzdWJqZWN0X2NvbGxlY3Rpb24vdHZfa29yZWFuL2l0ZW1zBahSK28IMHgyNgX8fnqCQnN1YmplY3RfY29sbGVjdGlvbi9zaG93X2hvdC9pdGVtcwR0MQgweDZhBWhR6JAKbW92aWUEdHYIMHg4ZglGjON0R3JVUwgweDgyBb58CZAIMHg0ZQXPfnhRCDB4NTUFt4NWWQgweDcxBdiaBlIIMHg0MQWcaVVTFG1vdmllX2xpc3QIMHgxMggweDY2BTtOmJgKdG9waWMF/FsUbwgweDFkBRRvWFQIMHgxMwX7fBdSDHNlcmllcwgweDY1BU5T7YsOY2hpbmVzZQUna45/CDB4NzIF5WUsZwgweDJhBemX/VYIMHg3YgWcVWdSCDB4NjEFqFJcTwgweDRjBTFyxWAIbG92ZQXReXteHnNjaWVuY2VfZmljdGlvbgWoUjt1CDB4OTAFrGCRdQ5teXN0ZXJ5BcpgmmAIMHg0YgVQYBZgCDB4OGIFr3JqfwgweDc1BQxUJ2AIMHgzNAUYYolOCDB4MzkFR1l7XggweDhkBcVgcoIOZXJvdGljYQXzl1BOCm11c2ljB6p+VV9HcggweDQwBbtsCGEIMHgxYgV6gi9nBmFydAgweDVmCDB4NWUFUpclZggweDU5BXNZJ2AMZmVtYWxlCDB4NzYUcmVhbF9ldmVudAW0ZptSCDB4ODUF0Z59dggweDhlBY5/35gIZm9vZAXFZUyIDHRyYXZlbAU/UeV6CmNoaWxkBbpOJ2AQaHVtYW5pdHkFtlutXggweDIyBYdleoIIMHg1MAgweDI5CDB4MmMFH2G6TggweDU2BbFS118IMHg4NAR0NAgweDNmBXlycoIIMHgyZgV0XuNOCDB4NTIGMHhjCDB4M2UIMHg2Ygh0ZXh0BHQyDnR5cGVfaWQF7XCtZBJ0eXBlX25hbWUFR3KTXggweDE4DFRvcDI1MAR0MwpyYXRpbwVHclVTDmZpbHRlcnMSXzB4M2NmZDdlEl8weDI4MDAxYRJfMHgxNzM2OGQSXzB4MWMyOTM5El8weDIyOTg0NhJfMHgxNGY5YmISXzB4ODBjOTg0El8weDU5NmEzZBJfMHgyYWY4YzgSXzB4NDkxMDRmEl8weDUyNDNkORJfMHgxNDZmZDQQXzB4YzFiNjkQXzB4NTU3NzcSXzB4MzJiZmQzEl8weDQyMjFlNRJfMHgxZjlmODESXzB4MWY2MjRiEl8weDEwODIzNRJfMHg0NWQ5N2USXzB4MmM0ZGY3El8weDQ5ZjE5MhJfMHg1ZDU3MmISXzB4ZDEzN2VmEl8weDI5NjEzORJfMHgzMDk3ZDASXzB4NTFmM2IzEl8weGI2MzBkORJfMHgzNTQ2YTESXzB4M2NkOWRmEl8weDI3ZTc3MRJfMHg0NmJmNTISXzB4MWFiZjgyEl8weDU5MDYxNxJfMHgzMWM1MGYSXzB4Y2E3NGY4El8weDQ3NWFkMxJfMHg1Yjc2NTISXzB4MjFjNjA5El8weGU2NGQ5NwgweDViCDB4NGEIMHg1MQgweDVhCDB4MjMMdm9kX2lkCDB4ODkQdm9kX25hbWUIMHgzOAgweDFlDnZvZF9waWMWdm9kX3JlbWFya3MQcGFyc2VJbnQIcGFnZQgweDM3EnBhZ2Vjb3VudAhsaXN0CDB4NjcIMHg0ZggweDZkAlUOJnN0YXJ0PRgmY291bnQ9MzAmcT0FYl8PXwloUeiQYl8PXwIsBXt8i1cJaFHokHt8i1cFMFc6UwgweDMzCDB4MTUIMHgzMQgweDZlCDB4N2YIMHg4NwgweDQ2CDB4MTAIMHg4MAgweDYwCDB4MjgIMHg2ZggweDg4CDB4M2Egb2ZmaWNpYWxfZG91bGlzdAgweDFjCDB4MTcUc3RhcnRzV2l0aAgweDJkBjB4ZggweDQzCDB4MjUIMHg3NAgweDg2CDB4MjAIMHgyMRJfMHg1YzVkZmUSXzB4MzI4OTZhEl8weDQyOWFiMhJfMHgyZjBjYzQSXzB4Mzc4ODljEl8weDVhMGVmYxJfMHgxMjU1M2MSXzB4Y2VjNTA4El8weDUwYjJmNhJfMHg0MjUwNGUSXzB4YmFkMDM2El8weDUxYzVmYhJfMHg0OGJiN2ISXzB4ZGQzYzBjEl8weDU4ZDExZBJfMHhmZTQzNmQGMHg1CGhvbWUOaG9tZVZvZBBjYXRlZ29yeQxkZXRhaWwIcGxheQxzZWFyY2gPpAMBpgMBABmoAwAFAKoDAAGsAwACrgMAA7ADAASyAwAOAAYBoAEAAAAgGg6SCwCqAwAMrAMBDK4DAgywAwMMsgMEDLQDAA22AwENuAMCCboDAwm8AwQJvgMFCcADBgnCAwcBxAMIAcYDCQHIAwoBygMLAcwDDAHOAw0B0AMOAdIDDwHUAxAB1gMRAdgDEg3aAxMBqAMUAQjoPr4CXwwAvgNfDQC+BF8PAL4FXxAAvgZfEQC+B18SAL4IXxMAvglfFAC+Cl8VAL4LXxYAvgxfGAC+DV8ZACkE7gAAAAQ2AAAABO8AAAAE8AAAAATxAAAABPIAAAAE8wAAAAT0AAAABPUAAAAE9gAAAAT3AAAABPgAAAAE+QAAAAT6AAAABPsAAAAE/AAAAAQwAAAABP0AAAAE/gAAAAT/AAAABAABAAAEAQEAAAQCAQAABAMBAAAEBAEAAAQ3AAAABAUBAAAEBgEAAAQHAQAABAgBAAAECQEAAAQKAQAAJiAABAsBAABMIAAAgAQMAQAATCEAAIAEDQEAAEwiAACABA4BAABMIwAAgAQPAQAATCQAAIAEEAEAAEwlAACABBEBAABMJgAAgAQSAQAATCcAAIAEEwEAAEwoAACABBQBAABMKQAAgAQVAQAATCoAAIAEFgEAAEwrAACABBcBAABMLAAAgAQYAQAATC0AAIAEGQEAAEwuAACABBoBAABMLwAAgAQbAQAATDAAAIAEHAEAAEwxAACABB0BAABMMgAAgARAAAAATDMAAIAEHgEAAEw0AACABB8BAABMNQAAgAQgAQAATDYAAIAEIQEAAEw3AACABCIBAABMOAAAgAQjAQAATDkAAIAEJAEAAEw6AACABCUBAABMOwAAgAQmAQAATDwAAIAEJwEAAEw9AACABCgBAABMPgAAgAQpAQAATD8AAIAEKgEAAExAAACABCsBAABMQQAAgAQsAQAATEIAAIAELQEAAExDAACABC4BAABMRAAAgAQvAQAATEUAAIAEMAEAAExGAACABDEBAABMRwAAgAQyAQAATEgAAIAEMwEAAExJAACABDQBAABMSgAAgAQ1AQAATEsAAIAENgEAAExMAACABDcBAABMTQAAgAQ4AQAATE4AAIAEOQEAAExPAACABDoBAABMUAAAgAQ7AQAATFEAAIAEPAEAAExSAACABD0BAABMUwAAgAQ+AQAATFQAAIAEPwEAAExVAACABEABAABMVgAAgARBAQAATFcAAIAEQgEAAExYAACABEMBAABMWQAAgAREAQAATFoAAIAERQEAAExbAACABEYBAABMXAAAgARHAQAATF0AAIAESAEAAExeAACABEkBAABMXwAAgARKAQAATGAAAIAESwEAAExhAACABEwBAABMYgAAgARNAQAATGMAAIAETgEAAExkAACABE8BAABMZQAAgARQAQAATGYAAIAEUQEAAExnAACABFIBAABMaAAAgARTAQAATGkAAIAEVAEAAExqAACABFUBAABMawAAgARWAQAATGwAAIAEVwEAAExtAACABFgBAABMbgAAgARZAQAATG8AAIAEWgEAAExwAACABFsBAABMcQAAgARcAQAATHIAAIAEXQEAAExzAACABF4BAABMdAAAgARfAQAATHUAAIAEYAEAAEx2AACABGEBAABMdwAAgARiAQAATHgAAIAEYwEAAEx5AACABGQBAABMegAAgARBAAAATHsAAIAEZQEAAEx8AACABGYBAABMfQAAgARnAQAATH4AAIAEaAEAAEx/AACABGkBAABMgAAAgARqAQAATIEAAIAEawEAAEyCAACABGwBAABMgwAAgARtAQAATIQAAIAEbgEAAEyFAACABG8BAABMhgAAgARwAQAATIcAAIAEcQEAAEyIAACABHIBAABMiQAAgARzAQAATIoAAIAEQgAAAEyLAACABHQBAABMjAAAgAR1AQAATI0AAIAEdgEAAEyOAACABHcBAABMjwAAgAR4AQAATJAAAIBfBQC+AGUFALxJAe4OvgFN2wAAAF8GAGUGAAR5AQAA7V8HAAR6AQAAXwgAC18JAL9fCgCzXwsAtJZfDgAEewEAAF8XACmkAwEEAQBAAg5DBgEAAgECAgABEwP4BQABQPoFAAEA/AUBADBhAAC+AE1+AQAAx2IAANCP2O0ppAMBAA5DBgEAAQABBAEAHQH+BQABAPgF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"
+  "video": {
+    "sites": [
+      {
+        "key": "豆瓣",
+        "name": "🟢 豆瓣👁️‍",
+        "type": 3,
+        "indexs": 1,
+        "api": "./douban_open.js"
+      },
+      {
+        "key": "doubanbb",
+        "name": "🟢 片单",
+        "type": 3,
+        "indexs": 1,
+        "api": "./doubanbb.js"
+      },
+      {
+        "key": "cntv",
+        "name": "🟢 央视",
+        "type": 3,
+        "api": "./cntv_open.js"
+      },
+      {
+        "key": "玩偶哥哥",
+        "name": "🟢 玩偶",
+        "type": 3,
+        "api": "./wogg_open.js",
+        "ext": "阿里token"
+      },
+      {
+        "key": "玩偶表哥",
+        "name": "🟢 表哥",
+        "type": 3,
+        "api": "./wobg_open.js",
+        "ext": "阿里token"
+      },
+      {
+        "key": "耐看",
+        "name": "🟢 耐看",
+        "type": 3,
+        "api": "./nkvod_open.js"
+      },
+      {
+        "key": "ikanbot",
+        "name": "🟢 爱看",
+        "type": 3,
+        "api": "./ikanbot_bytecode.js"
+      },
+      {
+        "key": "tiantian",
+        "name": "🟢 天天",
+        "type": 3,
+        "api": "./tiantian_open.js"
+      },
+      {
+        "key": "素白白",
+        "name": "🟢 素白",
+        "type": 3,
+        "api": "./subaibai_open.js"
+      },
+      {
+        "key": "低端影视",
+        "name": "🟢 低端",
+        "type": 3,
+        "api": "./ddys_open.js"
+      },
+      {
+        "key": "jojo_yozo",
+        "name": "🟢 JOJO",
+        "type": 3,
+        "api": "./jojo_bytecode.js"
+      },
+      {
+        "key": "电视直播",
+        "name": "🟢 电视",
+        "type": 3,
+        "api": "./caiji.js",
+        "ext": "https://tvbox.serv00.net/live.php"
+      },
+      {
+        "key": "南瓜",
+        "name": "🟢 南瓜①",
+        "type": 3,
+        "api": "./ng_open.js"
+      },
+      {
+        "key": "nangua",
+        "name": "🟢 南瓜②",
+        "type": 3,
+        "api": "./nangua_open.js"
+      },
+
+      {
+        "key": "在线之家",
+        "name": "🟢 在线",
+        "type": 3,
+        "api": "./zxzj_open.js"
+      },
+      {
+        "key": "一起看",
+        "name": "🟢 一起",
+        "type": 3,
+        "api": "./yqktv_open.js"
+      },
+      {
+        "key": "555电影",
+        "name": "🟢 三五",
+        "type": 3,
+        "api": "./555dy_open.js"
+      },
+      {
+        "key": "圣城影视",
+        "name": "🟢 圣城",
+        "type": 3,
+        "api": "./sc1080_open.js"
+      },
+      {
+        "key": "胖虎影视",
+        "name": "🟢 胖虎",
+        "type": 3,
+        "api": "./panghu_open.js"
+      },
+      {
+        "key": "人人影视",
+        "name": "🟢 人人",
+        "type": 3,
+        "api": "./rttks_open.js"
+      },
+      {
+        "key": "图图影视",
+        "name": "🟢 图图",
+        "type": 3,
+        "api": "./tutu_open.js"
+      },
+      {
+        "key": "农民影视",
+        "name": "🟢 农民",
+        "type": 3,
+        "api": "./nmddd_open.js"
+      },
+      {
+        "key": "dsxys",
+        "name": "🟢 师兄",
+        "type": 3,
+        "api": "./dsxys_open.js"
+      },
+      {
+        "key": "anfun",
+        "name": "🟢 Afun",
+        "type": 3,
+        "api": "./anfun_open.js"
+      },
+      {
+        "key": "厂长资源",
+        "name": "🟢 厂长",
+        "type": 3,
+        "api": "./czzy_open.js"
+      },
+      {
+        "key": "爱动漫",
+        "name": "🟢 爱漫",
+        "type": 3,
+        "api": "./adm_open.js"
+      },
+      {
+        "key": "酷我短剧",
+        "name": "🟢 短剧①",
+        "type": 3,
+        "api": "./kuwo_open.js"
+      },
+      {
+        "key": "短剧网",
+        "name": "🟢 短剧②",
+        "type": 3,
+        "api": "./duanju5_open.js"
+      },
+      {
+        "key": "斗鱼直播",
+        "name": "🟢 斗鱼",
+        "type": 3,
+        "api": "./douyu_open.js",
+        "ext": {
+          "from": "official",
+          "custom": "Popkart,跑跑卡丁车#KartRiderDrift,跑跑卡丁车：漂移#PPKDCSY,跑跑手游#PathofExile,流放之路#hjzgwx,火炬之光：无限#CrossGate,魔力宝贝#g_jyhx,劲乐幻想#xjcs,仙境传说#yqk,一起看"
+        }
+      },
+      {
+        "key": "虎牙直播",
+        "name": "🟢 虎牙",
+        "type": 3,
+        "api": "./huya_open.js",
+        "ext": {
+          "from": "official",
+          "custom": "2135,一起看#6245,放映厅#427,流放之路#6399,火炬之光：无限#2891,魔力宝贝#2620,跑跑卡丁车手游#162,跑跑卡丁车#7691,劲乐幻想#2675,仙境传说RO"
+        }
+      },
+      {
+        "key": "我的哔哩",
+        "name": "🟢 我哔",
+        "type": 3,
+        "api": "./mybili_open.js"
+      },
+      {
+        "key": "哔哩",
+        "name": "🟢 哔哩",
+        "type": 3,
+        "api": "./bili_open.js",
+        "ext": {
+          "categories": "音乐#动画#电影#电视剧#番剧#综艺#国创#搞笑#单机游戏#沙雕动画#沙雕穿越#沙雕",
+          "cookie": "DedeUserID=690781341;DedeUserID__ckMd5=cabc96906269c5b6;SESSDATA=2245ba24%2C1684212125%2C466fd%2Ab2;bili_jct=de6fdb60c10f8a83910aa55d79407b4e;"
+        }
+      },
+      {
+        "key": "哔哩直播",
+        "name": "🟢 直播",
+        "type": 3,
+        "api": "./bililive_open.js",
+        "ext": {
+          "cookie": "DedeUserID=690781341;DedeUserID__ckMd5=cabc96906269c5b6;SESSDATA=2245ba24%2C1684212125%2C466fd%2Ab2;bili_jct=de6fdb60c10f8a83910aa55d79407b4e;"
+        }
+      },
+      {
+        "key": "火狐资源",
+        "name": "🟢 火狐",
+        "type": 3,
+        "api": "./caiji.js",
+        "ext": {
+          "url": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8",
+          "categories": [
+            "内地剧",
+            "欧美剧",
+            "香港剧",
+            "台湾剧",
+            "马泰剧",
+            "韩剧",
+            "日剧",
+            "动作片",
+            "爱情片",
+            "喜剧片",
+            "科幻片",
+            "恐怖片",
+            "剧情片",
+            "战争片",
+            "灾难片",
+            "悬疑片",
+            "犯罪片",
+            "奇幻片",
+            "记录片",
+            "伦理片",
+            "动画片",
+            "中国动漫",
+            "日本动漫",
+            "欧美动漫",
+            "大陆综艺",
+            "日韩综艺",
+            "港台综艺",
+            "欧美综艺"
+          ]
+        }
+      },
+      {
+        "key": "新浪资源",
+        "name": "🟢 新浪",
+        "type": 3,
+        "api": "./caiji.js",
+        "ext": {
+          "url": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8",
+          "categories": [
+            "大陆剧",
+            "港澳剧",
+            "台湾剧",
+            "欧美剧",
+            "韩剧",
+            "日剧",
+            "泰剧",
+            "动漫",
+            "动漫电影",
+            "综艺",
+            "动作片",
+            "爱情片",
+            "科幻片",
+            "战争片",
+            "剧情片",
+            "恐怖片",
+            "喜剧片",
+            "纪录片",
+            "伦理片"
+          ]
+        }
+      },
+      {
+        "key": "红牛资源",
+        "name": "🟢 红牛",
+        "type": 3,
+        "api": "./caiji.js",
+        "ext": {
+          "url": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+          "categories": [
+            "国产剧",
+            "港澳剧",
+            "台湾剧",
+            "欧美剧",
+            "日剧",
+            "泰剧",
+            "韩剧",
+            "综艺",
+            "动漫",
+            "动漫电影",
+            "动作片",
+            "喜剧片",
+            "爱情片",
+            "科幻片",
+            "恐怖片",
+            "剧情片",
+            "战争片",
+            "纪录片",
+            "伦理片"
+          ]
+        }
+      },
+      {
+        "key": "速播资源",
+        "name": "🟢 速播",
+        "type": 3,
+        "api": "./caiji.js",
+        "ext": {
+          "url": "https://subocaiji.com/api.php/provide/vod/from/subm3u8/",
+          "categories": [
+            "大陆剧",
+            "台湾剧",
+            "韩剧",
+            "美剧",
+            "港澳剧",
+            "日剧",
+            "泰剧",
+            "动作片",
+            "爱情片",
+            "科幻片",
+            "战争片",
+            "剧情片",
+            "恐怖片",
+            "喜剧片",
+            "纪录片",
+            "伦理片",
+            "动漫电影",
+            "中国动漫",
+            "日本动漫",
+            "欧美动漫",
+            "综艺"
+          ]
+        }
+      },
+      {
+        "key": "极速资源",
+        "name": "🟢 极速",
+        "type": 3,
+        "api": "./caiji.js",
+        "ext": {
+          "url": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+          "categories": [
+            "内地剧",
+            "欧美剧",
+            "香港剧",
+            "台湾剧",
+            "马泰剧",
+            "韩剧",
+            "日剧",
+            "伦理片",
+            "动作片",
+            "爱情片",
+            "喜剧片",
+            "科幻片",
+            "恐怖片",
+            "剧情片",
+            "战争片",
+            "灾难片",
+            "悬疑片",
+            "犯罪片",
+            "奇幻片",
+            "记录片",
+            "动画片",
+            "中国动漫",
+            "日本动漫",
+            "欧美动漫",
+            "大陆综艺",
+            "日韩综艺",
+            "港台综艺",
+            "欧美综艺"
+          ]
+        }
+      },
+      {
+        "key": "光速资源",
+        "name": "🟢 光速",
+        "type": 3,
+        "api": "./caiji.js",
+        "ext": {
+          "url": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8",
+          "categories": [
+            "大陆剧",
+            "欧美剧",
+            "港澳剧",
+            "台湾剧",
+            "泰剧",
+            "韩剧",
+            "日剧",
+            "动作片",
+            "爱情片",
+            "喜剧片",
+            "科幻片",
+            "恐怖片",
+            "战争片",
+            "伦理片",
+            "动漫电影"
+          ]
+        }
+      },
+      {
+        "key": "宅腐TV",
+        "name": "🟢 宅腐",
+        "type": 3,
+        "api": "./appysv2.js",
+        "ext": "http://app.zhaifutvapp.com/ruifenglb_api.php/v1.vod"
+      },
+      {
+        "key": "聚视网",
+        "name": "🟢 央视",
+        "type": 3,
+        "api": "./cntv_open.js"
+      },
+      {
+        "key": "武享UFC",
+        "name": "🟢 UFC",
+        "type": 3,
+        "api": "./ufc_open.js"
+      },
+      {
+        "key": "武享吧",
+        "name": "🟢 武享",
+        "type": 3,
+        "api": "./hula8_open.js"
+      },
+      {
+        "key": "兔小贝",
+        "name": "🟢 小贝",
+        "type": 3,
+        "api": "./tuxiaobei_open.js"
+      },
+      {
+        "key": "贝乐虎",
+        "name": "🟢 乐虎",
+        "type": 3,
+        "api": "./ubestkid_open.js"
+      },
+      {
+        "key": "酷奇MV",
+        "name": "🟢 酷奇",
+        "type": 3,
+        "api": "./kuqimv_open.js"
+      },
+      {
+        "key": "播视网",
+        "name": "🟢 童趣",
+        "type": 3,
+        "api": "./boosj_open.js"
+      },
+      {
+        "key": "短视频",
+        "name": "🟢 短视频",
+        "type": 3,
+        "api": "./sharenice_open.js"
+      },
+      {
+        "key": "push_agent",
+        "name": "♻ 推送",
+        "type": 4,
+        "api": "./push_open.js",
+        "ext": {
+          "token": "阿里token",
+          "cookie": "夸克cookie"
+        }
+      },
+      {
+        "key": "阿里盘寻",
+        "name": "🔍 盘寻",
+        "type": 3,
+        "api": "./pansearch_open.js",
+        "ext": "阿里token"
+      },
+      {
+        "key": "阿里盘搜",
+        "name": "🔍 盘搜",
+        "type": 3,
+        "api": "./pansou_open.js",
+        "ext": "阿里token"
+      },
+      {
+        "key": "阿里七夜",
+        "name": "🔍 七夜",
+        "type": 3,
+        "api": "./dovx_open.js",
+        "ext": "阿里token"
+      },
+      {
+        "key": "小纸条",
+        "name": "🔍 纸条",
+        "type": 3,
+        "api": "./xiaozhitiao_open.js",
+        "ext": "阿里token"
+      },
+      {
+        "key": "UP云搜",
+        "name": "🔍 云搜",
+        "type": 3,
+        "api": "./upyun_open.js",
+        "ext": "阿里token"
+      },
+      {
+        "key": "易搜",
+        "name": "🔍 易搜",
+        "type": 3,
+        "api": "./yiso_open.js",
+        "ext": "阿里token$$$易搜账号cookie"
+      },
+      {
+        "key": "云盘4K",
+        "name": "🔍 云盘",
+        "type": 3,
+        "api": "./yunpan4k_open.js",
+        "ext": "阿里token"
+      },
+      {
+        "key": "找资源",
+        "name": "🔍 资源",
+        "type": 3,
+        "api": "./zhaozy_open.js",
+        "ext": "阿里token$$$找资源账号$$$找资源密码"
+      },
+      {
+        "key": "夸克趣盘搜",
+        "name": "🔍 趣盘",
+        "type": 3,
+        "api": "./funletu_open.js",
+        "ext": "夸克账号cookie"
+      }
+    ]
+  },
+  "read": {
+    "sites": [
+      {
+        "key": "13bqg",
+        "name": "📓 笔趣",
+        "type": 10,
+        "api": "./13bqg_open.js"
+      },
+      {
+        "key": "老白故事",
+        "name": "🎧 老白",
+        "type": 10,
+        "api": "./lbgs_book_open.js"
+      },
+      {
+        "key": "博看书苑",
+        "name": "🎧 博看",
+        "type": 10,
+        "api": "./bookan_book_open.js"
+      },
+      {
+        "key": "爱上你听书网",
+        "name": "🎧 爱听",
+        "type": 10,
+        "api": "./230ts_book_open.js"
+      },
+      {
+        "key": "DJ0898网",
+        "name": "🎧 爱DJ",
+        "type": 10,
+        "api": "./dj0898_book_open.js"
+      }
+    ]
+  },
+  "comic": {
+    "sites": [
+      {
+        "key": "copymanga",
+        "name": "📓 拷贝漫画",
+        "type": 20,
+        "api": "./copymanga_open.js"
+      },
+      {
+        "key": "fengche",
+        "name": "📓 风车漫画",
+        "type": 20,
+        "api": "./fengche_open.js"
+      },
+      {
+        "key": "baozimh",
+        "name": "📓 包子漫画",
+        "type": 20,
+        "api": "./baozimh_open.js"
+      },
+      {
+        "key": "ACG漫画",
+        "name": "📓 ACG漫画",
+        "type": 20,
+        "api": "./acgwd_open.js"
+      },
+      {
+        "key": "mkz",
+        "name": "📓 漫客漫画",
+        "type": 20,
+        "api": "./mkz_open.js"
+      },
+      {
+        "key": "bengou",
+        "name": "📓 笨狗漫画",
+        "type": 20,
+        "api": "./bengou_open.js"
+      }
+    ]
+  },
+  "pan": {
+    "sites": [
+      {
+        "key": "alist",
+        "name": "Alist",
+        "type": 40,
+        "api": "./alist_open.js",
+        "ext": [
+          {
+            "name": "🟢 小雅",
+            "server": "http://124.71.206.236:5678/",
+            "startPage": "/",
+            "showAll": false,
+            "search": true,
+            "headers": {
+              "Authorization": ""
             },
-{"key":"wogg","name":"影视 | 玩偶","type":3,"api":"assets://js/wogg.js","ext":"填自己的32位token"},
-{"key":"ytvip","name":"影视 | 影探","type":3,"api":"assets://js/yt.js","ext":"http://ytcms.lyyytv.cn/api.php/app/"},
-{"key":"yqktv_open","name":"影视 | 一起看","type":3,"api":"assets://js/yqktv_open.js"},
-{"key":"555dy_open","name":"影视 | 555","type":3,"api":"assets://js/555dy_open.js"},
-{"key":"yrzj_open","name":"影视 | 伊人","type":3,"api":"assets://js/yrzj_open.js"},
-{"key":"yzys_open","name":"影视 | 柚子","type":3,"api":"assets://js/yzys_open.js"},
-{"key":"sssp_open","name":"影视 | 速搜","type":3,"api":"assets://js/sssp_open.js"},
-{"key":"bulei_open","name":"影视 | 布雷","type":3,"api":"assets://js/bulei_open.js"},
-{"key":"miku_open","name":"影视 | 咪咕","type":3,"api":"assets://js/miku_open.js"},
-{"key":"tutu_open","name":"影视 | 图图","type":3,"api":"assets://js/tutu_open.js"},
-{"key":"jojo_open","name":"影视 | jojo","type":3,"api":"assets://js/jojo_open.js"},
-{"key":"jiohub","name":"影视 | jiohub","type":3,"api":"assets://js/jiohub.js"},
-{"key":"dsxys_open","name":"影视 | 大师兄","type":3,"api":"assets://js/dsxys_open.js"},
-{"key":"mino_open","name":"影视 | Mino","type":3,"api":"assets://js/mino_open.js"},
-{"key":"ddmv_open","name":"影视 | DDMV","type":3,"api":"assets://js/ddmv_open.js"},
-{
-    "key": "rejumao",
-    "name": "影视 | 热剧猫",
-    "type": 3,
-    "api": "assets://js/apptov5_open.js",
-    "ext": {
-        "domains": [
-            "https://app-1253196701.cos.ap-shanghai.myqcloud.com/app.txt",
-            "https://www.daenwl.com/app.txt"
-        ],
-        "aesKey": "8y8sDX3ZG22yACH3ZM5KfNGieTxEMKFe",
-        "aesIV": "WxRAbh68C8pP6SpN",
-        "rasPublicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6Ykikz4aIqkJC899VxwX\nwx27bZJGV/fDbgAHtXxZ73Mq8QWuPfeAanWDWiGPhJu5aVQndADi7B0L5RBIrirf\n6lIzA+l8Ubt6+nvPYQ9NSlRkObE4ML2Hw7ccAmcqzDD0vplJz7Y8o7qKIoyfK5NP\nXDuiv52HgbyEP6KlWCiDfMuIsAA+/3x9C/0RDRgjf3x+24EuGOD6Gnw+rVJCOb64\nW4KZ7vH/uhaQSLLnNYF9VD00c072tOeaBt2mElexJN66gcP65kmrkI5grFz2RcEg\nIEkwUcYBNiFeHUcFyQZuDj/DLqQidwMhFJfkcUuMtByR9cYl9BpqT/3NKVQ1EPrV\n7QIDAQAB\n-----END PUBLIC KEY-----",
-        "ic": "fwEUWytkwJqHICtu/kNrXOVGQAzWUw1mGuQYdT1heOKZ6vEEI+4jf6LAHJ/f4h39ZR2WL4fccGchSoCm+pqkBRi8asSMqZzKGGfY8ejzrYHxDjiTOhs4B6p/iC8Nrj+bcCmXAjVNksfxlcjU6JlbRQ=="
+            "params": {
+              "/abc": {
+                "password": "123"
+              },
+              "/abc/abc": {
+                "password": "123"
+              }
+            }
+          },
+          {
+            "name": "🟢 合集",
+            "server": "http://www.jczyl.top:5244/"
+          },
+          {
+            "name": "🟢 东哥",
+            "server": "http://101.34.67.237:5244/"
+          },
+          {
+            "name": "🟢 美云",
+            "server": "https://h.dfjx.ltd/"
+          },
+          {
+            "name": "🟢 小新",
+            "server": "https://pan.cdnxin.top/"
+          },
+          {
+            "name": "🟢 白云",
+            "server": "http://breadmyth.asuscomm.com:22222/"
+          },
+          {
+            "name": "🟢 小鸭",
+            "server": "http://www.214728327.xyz:5201/"
+          },
+          {
+            "name": "🟢 瑶瑶",
+            "server": "https://lyly.run.goorm.io/"
+          },
+          {
+            "name": "🟢 潇洒",
+            "server": "https://alist.azad.asia/"
+          },
+          {
+            "name": "🟢 鹏程",
+            "server": "https://pan.pengcheng.team/"
+          },
+          {
+            "name": "🟢 浅唱",
+            "server": "http://vtok.pp.ua/"
+          },
+          {
+            "name": "🟢 小丫",
+            "server": "http://alist.xiaoya.pro/"
+          },
+          {
+            "name": "🟢 触光",
+            "server": "https://pan.ichuguang.com"
+          },
+          {
+            "name": "🟢 弱水",
+            "server": "http://shicheng.wang:555/"
+          },
+          {
+            "name": "🟢 神器",
+            "server": "https://alist.ygxz.xyz/"
+          },
+          {
+            "name": "🟢 资源",
+            "server": "https://pan.ecve.cn/"
+          },
+          {
+            "name": "🟢 雨呢",
+            "server": "https://pan.clun.top/"
+          },
+          {
+            "name": "🟢 oeio",
+            "server": "https://o.oeio.repl.co/"
+          },
+          {
+            "name": "🟢 悦享",
+            "server": "https://nics.eu.org/"
+          },
+          {
+            "name": "🟢 分享",
+            "server": "https://ofoo.ml/"
+          },
+          {
+            "name": "🟢 PRO",
+            "server": "https://alist.prpr.run/"
+          },
+          {
+            "name": "🟢 多多",
+            "server": "https://pan.xwbeta.com"
+          },
+          {
+            "name": "🟢 小陈",
+            "server": "https://ypan.cc/"
+          },
+          {
+            "name": "🟢 只鱼",
+            "server": "https://alist.youte.ml"
+          },
+          {
+            "name": "🟢 七米",
+            "server": "https://al.chirmyram.com"
+          },
+          {
+            "name": "🟢 九帝",
+            "server": "https://alist.shenzjd.com"
+          },
+          {
+            "name": "🟢 白雪",
+            "server": "https://pan.jlbx.xyz"
+          },
+          {
+            "name": "🟢 星梦",
+            "server": "https://pan.bashroot.top"
+          },
+          {
+            "name": "🟢 repl",
+            "server": "https://ali.liucn.repl.co"
+          },
+          {
+            "name": "🟢 讯维",
+            "server": "https://pan.xwbeta.com"
+          }
+        ]
+      }
+    ]
+  },
+  "color": [
+    {
+      "light": {
+        "bg": "https://i2.100024.xyz/2024/01/13/qrnuwt.webp",
+        "bgMask": "0x50ffffff",
+        "primary": "0xFF2B6C00",
+        "onPrimary": "0xFFFFFFFF",
+        "primaryContainer": "0xFFA6F779",
+        "onPrimaryContainer": "0xFF082100",
+        "secondary": "0xFF55624C",
+        "onSecondary": "0xFFFFFFFF",
+        "secondaryContainer": "0xFFD9E7CA",
+        "onSecondaryContainer": "0xFF131F0D",
+        "tertiary": "0xFF386666",
+        "onTertiary": "0xFFFFFFFF",
+        "tertiaryContainer": "0xFFBBEBEB",
+        "onTertiaryContainer": "0xFF002020",
+        "error": "0xFFBA1A1A",
+        "onError": "0xFFFFFFFF",
+        "errorContainer": "0xFFFFDAD6",
+        "onErrorContainer": "0xFF410002",
+        "background": "0xFFFDFDF5",
+        "onBackground": "0xFF1A1C18",
+        "surface": "0xFFFDFDF5",
+        "onSurface": "0xFF1A1C18",
+        "surfaceVariant": "0xFFE0E4D6",
+        "onSurfaceVariant": "0xFF1A1C18",
+        "inverseSurface": "0xFF2F312C",
+        "onInverseSurface": "0xFFF1F1EA",
+        "outline": "0xFF74796D",
+        "outlineVariant": "0xFFC3C8BB",
+        "shadow": "0xFF000000",
+        "scrim": "0xFF000000",
+        "inversePrimary": "0xFF8CDA60",
+        "surfaceTint": "0xFF2B6C00"
+      },
+      "dark": {
+        "bg": "https://i2.100024.xyz/2024/01/13/qrc37o.webp",
+        "bgMask": "0x50000000",
+        "primary": "0xFF8CDA60",
+        "onPrimary": "0xFF133800",
+        "primaryContainer": "0xFF1F5100",
+        "onPrimaryContainer": "0xFFA6F779",
+        "secondary": "0xFFBDCBAF",
+        "onSecondary": "0xFF283420",
+        "secondaryContainer": "0xFF3E4A35",
+        "onSecondaryContainer": "0xFFD9E7CA",
+        "tertiary": "0xFFA0CFCF",
+        "onTertiary": "0xFF003737",
+        "tertiaryContainer": "0xFF1E4E4E",
+        "onTertiaryContainer": "0xFFBBEBEB",
+        "error": "0xFFFFB4AB",
+        "errorContainer": "0xFF93000A",
+        "onError": "0xFF690005",
+        "onErrorContainer": "0xFFFFDAD6",
+        "background": "0xFF1A1C18",
+        "onBackground": "0xFFE3E3DC",
+        "outline": "0xFF8D9286",
+        "onInverseSurface": "0xFF1A1C18",
+        "inverseSurface": "0xFFE3E3DC",
+        "inversePrimary": "0xFF2B6C00",
+        "shadow": "0xFF000000",
+        "surfaceTint": "0xFF8CDA60",
+        "outlineVariant": "0xFF43483E",
+        "scrim": "0xFF000000",
+        "surface": "0xFF1A1C18",
+        "onSurface": "0xFFC7C7C0",
+        "surfaceVariant": "0xFF43483E",
+        "onSurfaceVariant": "0xFFC7C7C0"
+      }
     }
-},
-{
-    "key": "布雷v5",
-    "name": "影视 | 布蕾",
-    "type": 3,
-    "api": "assets://js/apptov5_open.js",
-    "ext": {
-        "domains": [
-            "https://v5-public-1251970844.cos.ap-shanghai.myqcloud.com/accredits/68.json"
-        ],
-        "aesKey": "xMQFiWw77QzaiBDKNWjNRAChrenE2zB2",
-        "aesIV": "j2WbrZph6G7m2mRM",
-        "rasPublicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvBB/JjVWPpKFAWJCiQc5\neP6FrwNG8mXt/Y/yk98sigh/vNtX0sQX56eQi1YNvZ8sIiqoVWMl1/5NlANA0A/G\n/BiH5hCFYqY5L8adZIZgSd/QR8zMAyEDccVaNog6nmXQkGWjm/269Gl+gFaCOtXO\nzyEullcgevPcGHXwAGbGc1U3XaQjydC3mF290Mk4wKSjCn3sVfMSlgh8lsPhFvBo\n5MqqBWEkIz+eF+3ni2jQqHz1oy23RLPx9cV02GAHCQWFDlEZFUXvQHJU7RJP0X0z\nfpSg9bqVQ22iRvSWIE13S4SRf18eKt7S3yeH53sv/se/evXKyYE7P4wGhxhNuhOe\nXQIDAQAB\n-----END PUBLIC KEY-----\n",
-        "ic": "fVO1y5qVGVto+xbgx3hgGlmgOBmxt1sr5g+uWbrh8ENTyZcVFduzilI0OHY/uAMcLNe4EjaSZjmsc8t2SCdcIxZ1q2i+OJHTB90YjwjG+5mLjKf8gbTBhztyxJk68atX5msA1qsFJVhxnqHCGBkViA=="
-    }
-},
-{
-    "key": "追忆",
-    "name": "影视 | 追忆",
-    "type": 3,
-    "api": "assets://js/apptov5_open.js",
-    "ext": {
-        "domains": [
-            "https://xtao-1253811961.cos.ap-chengdu.myqcloud.com/appto/xtao.json"
-        ],
-        "aesKey": "we2CwNfG7PJppQmBfX8MMMQaWbSdcDXi",
-        "aesIV": "DnT3jxT8RYsa8ctc",
-        "rasPublicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsKLhkMcBpvQ7x1bhAVDg\nNWdhJpkVUhWQaunZoDD7IwUNkkzl3cgHOBVo6H8IkoTnMAHwWnLIK9xHTwtN0ikA\nbZvlIOrOWwrhWwGYUAVSAtZm7FDHyVQlW3ZSv+oeBceIE7MZbCi7ZmS3Ft2XedEE\nyjXdvaQN8f+1ORmf/AsMTwfX2QhsjD1qNtq+pCw9wnd+AWGW6lAG8mxNTygfWqKT\n2GZsor5v3qq/qsMiFL7aUy/ZiBlHInzC3R9ZP6mWICt72Su+C9VzH+LHdiSMWmpZ\n1uT7EPJfh0MgzQUbIhNPVMeOBkDcf93DzO+zTDznpPCed12OORZL5PDg/2lK8i+H\nCwIDAQAB\n-----END PUBLIC KEY-----",
-        "ic": "4Dqrm2DknrkdH3qOh7rE2nwK9BUd5cMVriFc+kWKpUedUJt6cLXHcROX9ps/2rBoBEftIjKkCAB5PSxCJUoKm/1n1mEZt7hQLSyIco9fRfS1QwyZItfMvHbjPJoB0vQnOvlcl7C8lgRZHFQLVXh9iA=="
-    }
-},
-{"key":"kunyu77_yz","name":"影视 | 七七","type":3,"api":"assets://js/kunyu77.js"},
-{"key":"czzy","name":"影视 | 厂长","type":3,"api":"assets://js/czzy_open.js"},
-{"key":"libvio","name":"影视 | libvio","type":3,"api":"assets://js/libvio_open.js"},
-{"key":"kkys","name":"影视 | 快看","type":3,"api":"assets://js/kkys_open.js"},
-{"key":"ikanbot_open","name":"影视 | 爱看","type":3,"api":"assets://js/ikanbot_open.js"},
-{"key":"ngys","name":"影视 | 南瓜","type":3,"api":"assets://js/ng_open.js"},
-{"key":"nivod","name":"影视 | 泥巴","type":3,"api":"assets://js/nivod_op.js"},
-{"key":"duboku2_open","name":"影视 | 独播库","type":3,"api":"assets://js/duboku2_open.js"},
-{"key":"subaibai","name":"影视 | 素白白","type":3,"api":"assets://js/subaibai_open.js"},
-{"key":"drpy_js_zxzj_open","name":"影视 | 在线之家","type":3,"api":"assets://js/zxzj_open.js"},
-{"key":"drpy_js_boosj_open","name":"少儿 | 童趣","type":3,"api":"assets://js/boosj_open.js"},
-{"key":"drpy_js_tuxiaobei_open","name":"少儿 | 兔小贝","type":3,"api":"assets://js/tuxiaobei_open.js"},
-{"key":"drpy_js_ubestkid_open","name":"少儿 | 贝乐虎","type":3,"api":"assets://js/ubestkid_open.js"},
-{"key":"sharenice","name":"聚合 | 短视频","type":3,"api":"assets://js/sharenice_open.js"},
-{
-    "key": "huya",
-    "name": "直播 | 虎牙",
-    "type": 3,
-    "api": "assets://js/huya_open.js",
-    "ext": {
-        "from": "official",
-        "custom": "1,英雄联盟#2336,王者荣耀"
-    }
-},
-{
-    "key": "douyu",
-    "name": "直播 | 斗鱼",
-    "type": 3,
-    "api": "assets://js/douyu_open.js",
-    "ext": {
-        "from": "official",
-        "custom": "LOL,英雄联盟#wzry,王者荣耀"
-    }
-},
-{"key":"mybili","name":"视频 | 哔哩综合","type":3,"api":"assets://js/mybili_open.js"},
-{"key":"bili_open","name":"视频 | 我的哔哩","type":3,"api":"assets://js/bili_open.js","ext":{"categories":"沙雕动画#健身#音乐#舞蹈#风景#美食#科普#历史#法考#医考","cookie":"填自己的cookie"}},
-{"key":"kuqimv","name":"MV | 酷奇","type":3,"api":"assets://js/kuqimv_open.js"},
-{"key":"drpy_js_cntv_open","name":"电视 | 视聚场","type":3,"api":"assets://js/cntv_open.js"},
-{"key":"哈喽","name":"影视 | 哈喽","type":3,"api":"assets://js/appysv2.js","ext":"http://www.miniku.cc/xgapp.php/v1/"},
-{"key":"1080dyw","name":"影视 | 视界","type":3,"api":"assets://js/appysv2.js","ext":"https://www.1080dyw.cc/api.php/v1.vod"},
-{"key":"miniku","name":"影视 | 迷你","type":3,"api":"assets://js/appysv2.js","ext":"http://www.miniku.cc/xgapp.php/v1/"},
-{"key":"aidi","name":"影视 | 爱迪","type":3,"api":"assets://js/appysv2.js","ext":"https://api123.adys.app/xgapp.php/v3/"},
-{"key":"yaya","name":"影视 | 鸭鸭","type":3,"api":"assets://js/appysv2.js","ext":"https://yayayaaapp.ynf.icu/api.php/app/"},
-{"key":"kuku","name":"影视 | 酷酷","type":3,"api":"assets://js/appysv2.js","ext":"http://cms.realdou.cn:35264/api.php/app/"},
-{"key":"beijihu","name":"影视 | 极狐","type":3,"api":"assets://js/appysv2.js","ext":"https://www.kuin.one/api.php/app/"},
-{"key":"kuk","name":"影视 | 天堂","type":3,"api":"assets://js/appysv2.js","ext":"http://dytt996.com/api.php/app/"},
-{"key":"kku","name":"影视 | 酷影","type":3,"api":"assets://js/appysv2.js","ext":"https://www.gsjtlxy.top/xgapp.php/v3/"},
-{"key":"kuu","name":"影视 | 酷客","type":3,"api":"assets://js/appysv2.js","ext":"https://www.kuin.one/api.php/app/"},
-{"key":"ruidou","name":"影视 | 锐豆","type":3,"api":"assets://js/appysv2.js","ext":"http://ys.realdou.cn:2683/api.php/app/"},
-{"key":"mayi","name":"影视 | 蚂蚁","type":3,"api":"assets://js/appysv2.js","ext":"http://wushutvcms.byzz.top/api.php/app/"},
-{"key":"sukan","name":"影视 | 速看","type":3,"api":"assets://js/appysv2.js","ext":"https://sk100.tv/api.php/app/"},
-{"key":"midi","name":"影视 | 明帝","type":3,"api":"assets://js/appysv2.js","ext":"https://ys.md214.cn/api.php/app/"},
-{"key":"dadou","name":"影视 | 大豆","type":3,"api":"assets://js/appysv2.js","ext":"http://www.dadou.cm/api.php/app/"},
-{"key":"qtw","name":"影视 | 彩虹","type":3,"api":"assets://js/appysv2.js","ext":"http://ys.qtw.asia/lvdou_api.php/v1.vod"},
-{"key":"xinlang","name":"影视 | 新浪","type":3,"api":"assets://js/caiji.js","ext":"https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8"},
-{"key":"bdzy","name":"影视 | 百度","type":3,"api":"assets://js/caiji.js","ext":"https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/"},
-{"key":"bfzy","name":"影视 | 暴风","type":3,"api":"assets://js/caiji.js","ext":"https://bfzyapi.com/api.php/provide/vod/"},
-{"key":"394tv","name":"影视 | 39","type":3,"api":"assets://js/caiji.js","ext":"https://www.394tv.com/api.php/provide/vod/"},
-{"key":"languang","name":"影视 | 蓝光","type":3,"api":"assets://js/caiji.js","ext":"http://www.zzrhgg.com/api.php/provide/vod/"},
-{"key":"lehuo","name":"影视 | 乐活","type":3,"api":"assets://js/caiji.js","ext":"https://cj.vodimg.top/api.php/provide/vod/"},
-{"key":"piaoling","name":"影视 | 飘零","type":3,"api":"assets://js/caiji.js","ext":"https://p2100.net/api.php/provide/vod/"},
-{"key":"yingtu","name":"影视 | 影图","type":3,"api":"assets://js/caiji.js","ext":"https://cj.vodimg.top/api.php/provide/vod/"},
-{"key":"feifan","name":"影视 | 非凡","type":3,"api":"assets://js/caiji.js","ext":"https://cj.ffzyapi.com/api.php/provide/vod/from/ffm3u8/"},
-{"key":"feisu","name":"影视 | 飞速","type":3,"api":"assets://js/caiji.js","ext":"https://www.feisuzyapi.com/api.php/provide/vod/from/fsm3u8/"},
-{"key":"guangsu","name":"影视 | 光速","type":3,"api":"assets://js/caiji.js","ext":"https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/"},
-{"key":"hongniu","name":"影视 | 红牛","type":3,"api":"assets://js/caiji.js","ext":"https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/"},
-{"key":"jinying","name":"影视 | 金鹰","type":3,"api":"assets://js/caiji.js","ext":"https://jinyingzy.com/provide/vod/from/jinyingm3u8/"},
-{"key":"jisu","name":"影视 | 极速","type":3,"api":"assets://js/caiji.js","ext":"https://jszyapi.com/api.php/provide/vod/from/jsm3u8/"},
-{"key":"kuaiche","name":"影视 | 快车","type":3,"api":"assets://js/caiji.js","ext":"https://caiji.kczyapi.com/api.php/provide/vod/from/kcm3u8/"},
-{"key":"liangzi","name":"影视 | 量子","type":3,"api":"assets://js/caiji.js","ext":"https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/"},
-{"key":"qihu","name":"影视 | 奇虎","type":3,"api":"assets://js/caiji.js","ext":"https://caiji.qhzyapi.com/api.php/provide/vod/from/qhm3u8/"},
-{"key":"guangsuapi","name":"影视 | 光速","type":3,"api":"assets://js/caiji.js","ext":"http://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/"}
-]},
-"read":{"sites":[
-{"key":"230ts","name":"爱上你听书","type":10,"api":"assets://js/230ts_book_open.js"},
-{"key":"laobaigushi","name":"老白故事","type":10,"api":"assets://js/lbgs_open.js"},
-{"key":"bookan","name":"博看听书","type":10,"api":"assets://js/bookan_open.js"},
-{"key":"dj0898","name":"世纪DJ","type":3,"api":"assets://js/dj0898_book_open.js"}
-]},
-"pan":{"sites":[
-{"key":"alist","name":"Alist","type":40,"api":"assets://js/alist_open.js","ext":[
-{"name":"丫仙女","server":"http://alist.xiaoya.pro/","startPage":"/","showAll":false,"search":true,"headers":{"Authorization":""},"params":{"/abc":{"password":"123"},"/abc/abc":{"password":"123"}}},
-{"name":"小鸭","server":"http://shicheng.wang:555/","startPage":"/","showAll":false,"search":true,"params":{"/abc":{"password":"123"},"/abc/abc":{"password":"123"}}},
-{"name":"小猫","server":"https://nics.eu.org","startPage":"/SP1","showAll":false,"search":true,"params":{"/abc":{"password":"123"},"/abc/abc":{"password":"123"}}},
-{"name":"ECVE","server":"https://pan.ecve.cn"},
-{"name":"觸光","server":"https://pan.ichuguang.com"},
-{"name":"一只魚","server":"https://vtok.pp.ua/"},
-{"name":"七米藍","server":"https://al.chirmyram.com"},
-{"name":"神族九帝","server":"https://alist.shenzjd.com"},
-{"name":"梓澪","server":"https://zi0.cc"},
-{"name":"一只鱼","server":"https://alist.youte.ml"},
-{"name":"杜比","server":"https://dubi.tk"},
-{"name":"姬路白雪","server":"https://pan.jlbx.xyz"},
-{"name":"星梦","server":"https://pan.bashroot.top"},
-{"name":"repl","server":"https://ali.liucn.repl.co"},
-{"name":"讯维云盘","server":"https://pan.xwbeta.com"},
-{"name":"正奕合集","server":"http://www.jczyl.top:5244/"},
-{"name":"东哥","server":"http://101.34.67.237:5244/"},
-{"name":"美云","server":"https://h.dfjx.ltd/"},
-{"name":"小新盘","server":"https://pan.cdnxin.top/"},
-{"name":"白云tv","server":"http://breadmyth.asuscomm.com:22222/"},
-{"name":"小雅分类","server":"http://www.214728327.xyz:5207/"},
-{"name":"瑶瑶","server":"https://lyly.run.goorm.io/"},
-{"name":"潇洒个人","server":"https://alist.azad.asia/"},
-{"name":"鹏程","server":"https://pan.pengcheng.team/"},
-{"name":"小丫","server":"http://alist.xiaoya.pro/"},
-{"name":"神器云","server":"https://alist.ygxz.xyz/"},
-{"name":"雨呢","server":"https://pan.clun.top/"},
-{"name":"OEIO","server":"https://o.oeio.repl.co/"},
-{"name":"酷呵盘","server":"https://pan.kuhehe.top/"},
-{"name":"分享者","server":"https://melist.me/"},
-{"name":"目瞪口呆","server":"https://pan.mdgd.cc/"},
-{"name":"小陈","server":"https://ypan.cc/"},
-{"name":"动漫盘","server":"http://pan.smjc.cc"},
-{"name":"神秘小盘","server":"https://yun.ltt.zone/"},
-{"name":"SODAZ1","server":"https://pan.sodaz.xyz/"},
-{"name":"ccaa","server":"http://ww1.ccaac.xyz/"},
-{"name":"姹莱坞","server":"https://alist.agczsz.top/","passwd":"agree"},
-{"name":"老谭","server":"https://pan.cqtjy.cn/"},
-{"name":"皓星繁天","server":"https://pan.hxft.xyz/"},
-{"name":"肥灿","server":"http://43.200.153.107:55609/"},
-{"name":"悦享盘","server":"https://pity.eu.org/"},
-{"name":"小雅备用","server":"http://123.60.188.109:5678/"},
-{"name":"小黄瓜","server":"http://sbpan.tk/"},
-{"name":"👀微资·随意盘","server":"https://apps.weixinqqq.com/"},
-{"name":"雨呢备用","server":"https://clun.eu.org/"},
-{"name":"潇洒备用","server":"http://www.azad.asia:5244/"},
-{"name":"A大杂物库","server":"https://alist.qyide.com/"}
-]}]}}
+  ]
+}
